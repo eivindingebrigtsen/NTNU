@@ -18,7 +18,7 @@
 	url = git://github.com/Modernizr/Modernizr.git
 [submodule "js/ext/datejs"]
 	path = js/ext/datejs
-	url = git://github.com/datejs/Datejs.git
+	url = git://github.com/Modernizr/Modernizr.git
 [submodule "js/ext/lessjs"]
 	path = js/ext/lessjs
 	url = git://github.com/cloudhead/less.js.git
