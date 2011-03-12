@@ -1,0 +1,40 @@
+html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, code, del, dfn, em, img, q, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-weight: inherit;
+	font-style: inherit;
+	font-family: inherit;
+	vertical-align: baseline;
+}
+body {
+	background: #fff;
+	padding: 50px;
+	color: #123;
+	font-family: "Lucida Grande", Arial, Helvetica, sans-serif;
+	font-size: 16px;
+	line-height: 1.5;
+}
+
+.box-shadow (@x: 0, @y: 0, @blur: 1px, @alpha: #000) {
+  @val: @x @y @blur rgba(0, 0, 0, @alpha);
+
+  box-shadow:         @val;
+  -webkit-box-shadow: @val;
+  -moz-box-shadow:    @val;
+}
+.border-radius(@r){
+	-webkit-border-radius: @r;
+	-moz-border-radius: @r;
+	border-radius: @r;
+}
+
+.wrapper { @base: #123;
+	width: 500px;
+	margin: 0 auto;
+	padding: 20px;
+  color:        saturate(@base, 5%);
+  border-color: lighten(@base, 30%);
+	.border-radius(5px);
+  .box-shadow(0, 0, 5px, 0.4);
+}
