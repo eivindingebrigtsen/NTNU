@@ -10,14 +10,32 @@ html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pr
 body{
 	background: #DDD;
 	padding: 50px;
-	font-family: Monaco, Courier;
+	font-family: Courier;
 }
 
 h1,h2,h3,h4,h5,p{
 	margin-bottom: .5em;
 }
+h1{
+	font-family: Courier;
+	text-align: center;
+}
+
+.radius(){
+	border-radius: 5px;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+}
+.shadow(){
+	@val: 0 0 5px #000;
+	box-shadow: @val;
+	-webkit-box-shadow: @val;
+	-moz-box-shadow: @val;
+}
 
 .wrapper{
+	.shadow();
+	.radius();
 	width: 550px;
 	margin: 0 auto;
 	background: #FFF;
