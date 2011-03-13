@@ -16,6 +16,9 @@ body{
 
 h1,h2,h3,h4,h5,p{
 	margin-bottom: .5em;
+	&.space{
+		margin-top: 3em;
+	}
 }
 h1{
 	font-family: Courier;
@@ -72,6 +75,9 @@ h1{
 			float:left;
 			width: 49%;
 			padding: 0;
+		}
+		&.halves > li:nth-child(odd){
+			clear: left;
 		}
 	}
 	li{
