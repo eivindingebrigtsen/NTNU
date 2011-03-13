@@ -3,15 +3,32 @@
 	<head>
 		<title>A simple framework</title>
 		<script src="js/ext/modernizr/modernizr.js" type="text/javascript" charset="utf-8"></script>
-		<link rel="stylesheet/less" href="css/master.less" type="text/css">
-		<script src="js/ext/lessjs/dist/less-1.0.41.min.js" type="text/javascript" charset="utf-8"></script>
-		<script src="js/ext/jquery/dist/jquery.min.js" type="text/javascript" charset="utf-8"></script>
-				
+		<link rel="stylesheet/less" href="css/master.less" type="text/css">				
 	</head>
 	<body>
 		<div class="wrapper">			
-			<h1>Test</h1>
-			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+			<header>				
+				<h1>App</h1>
+			</header>
+			<nav>
+				<ul>
+					<li id="add"><a href="#add">Add item</a></li>
+				</ul>
+			</nav>
+			<section>
+				<ul id="items"></ul>
+			</section>
+			<aside>
+				
+			</aside>
+			<footer></footer>
 		</div>
+		<script src="js/ext/lessjs/less-1.0.41.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/ext/jquery/jquery.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/ext/underscore/underscore-min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/ext/jquery-ui/jquery-ui-1.8.x.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/ext/mustache/mustache.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/src/core.js" type="text/javascript" charset="utf-8"></script>
+
 	</body>
 </html>

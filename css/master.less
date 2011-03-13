@@ -1,20 +1,3 @@
-html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, code, del, dfn, em, img, q, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td {
-	margin: 0;
-	padding: 0;
-	border: 0;
-	font-weight: inherit;
-	font-style: inherit;
-	font-family: inherit;
-	vertical-align: baseline;
-}
-body {
-	background: #fff;
-	padding: 50px;
-	color: #123;
-	font-family: "Lucida Grande", Arial, Helvetica, sans-serif;
-	font-size: 16px;
-	line-height: 1.5;
-}
 
 .box-shadow (@x: 0, @y: 0, @blur: 1px, @alpha: #000) {
   @val: @x @y @blur rgba(0, 0, 0, @alpha);
@@ -28,13 +11,107 @@ body {
 	-moz-border-radius: @r;
 	border-radius: @r;
 }
+.hidden(){
+	display: none;
+	visibility: hidden;
+}
+.wrap(){
+  text-wrap: wrap;
+  white-space: pre-wrap;
+  white-space: -moz-pre-wrap;
+  word-wrap: break-word;
+}
+.float(){
+	float: left;	
+}
+.clear(){
+	clear: both;
+	&:after{
+		content: ".";
+		display: block;
+		clear: both;
+		visibility: hidden;
+		line-height: 0;
+		height: 0;
+	}
+}
+@import "js/ext/jquery-ui/themes/base/jquery.ui.all.css";
 
-.wrapper { @base: #123;
+
+html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, code, del, dfn, em, img, q, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-weight: inherit;
+	font-style: inherit;
+	font-family: inherit;
+	vertical-align: baseline;	
+}
+html{
+	.box-shadow(0, 0, 5px, 0.9);
+}
+body {
+	background: #eee;
+	padding: 50px;
+	color: #123;
+	font-family: "Lucida Grande", Arial, Helvetica, sans-serif;
+	font-size: 16px;
+	line-height: 1.5;
+}
+
+.wrapper { @base: #def;
 	width: 500px;
 	margin: 0 auto;
-	padding: 20px;
-  color:        saturate(@base, 5%);
-  border-color: lighten(@base, 30%);
-	.border-radius(5px);
+	border: 20px solid #EEE;	
+  background-color: lighten(spin(@base, 8), 25%);
+	color: darken(@base, 70%);
+}
+.boxshadow .wrapper{
   .box-shadow(0, 0, 5px, 0.4);
 }
+.borderradius .wrapper{
+	.border-radius(5px);
+}
+
+
+nav{
+	ul{
+		.clear(); 
+		list-style:none;
+		border: 2px solid #567;
+		border-width: 1px 0;
+	}
+	li{
+		.float();
+		margin-right: 5px;
+		padding: 5px;
+	}
+	a{
+		color: #123;
+	}
+}
+
+section{
+	ul{
+		.clear();
+		list-style: none;
+		padding: 0;
+		margin: 0;
+	}
+	li{
+		.clear();
+		border-bottom: 1px solid silver;
+		.item{
+			padding: 3px 7px;			
+		}
+		.title{
+			margin-left: 5px;
+		}
+		&:hover{
+			background-color: #DEF;
+			cursor: pointer;
+		}
+	}
+}
+
+
