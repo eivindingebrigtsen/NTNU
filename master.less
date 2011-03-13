@@ -7,9 +7,9 @@ html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pr
 	font-family: inherit;
 	vertical-align: baseline;
 }
+
 body{
 	background: #DDD;
-	padding: 50px;
 	font-family: Courier;
 }
 
@@ -35,11 +35,20 @@ h1{
 
 .wrapper{
 	.shadow();
-	.radius();
 	width: 550px;
 	margin: 0 auto;
 	background: #FFF;
-	padding: 20px;
+	padding: 50px 50px;
+	a{
+		color: #006;
+		background: #DEF;
+		padding: 1px 4px;
+		&:hover{
+			background: #006;
+			color: #FFF;
+		}
+	}
+
 	ul{
 		list-style: none;
 		margin-bottom: 20px;
