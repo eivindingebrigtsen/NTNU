@@ -32,6 +32,18 @@ h1{
 	-webkit-box-shadow: @val;
 	-moz-box-shadow: @val;
 }
+.clear(){
+	clear: both;
+	&:after {
+		content: ".";
+		display: block;
+		clear: both;
+		visibility: hidden;
+		line-height: 0;
+		height: 0;
+	}	
+}
+
 
 .wrapper{
 	.shadow();
@@ -52,6 +64,14 @@ h1{
 	ul{
 		list-style: none;
 		margin-bottom: 20px;
+		&.halves{
+			.clear()
+		}
+		&.halves > li{
+			float:left;
+			width: 49%;
+			padding: 0;
+		}
 	}
 	li{
 		padding: 3px 7px;
